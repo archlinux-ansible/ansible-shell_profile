@@ -1,0 +1,13 @@
+---
+
+- name: Get file name and contents
+  set_fact:
+    shell_profile__file: "{{ (item.keys() | list)[0] }}"
+    shell_profile__contents: "{{ (item.values() | list)[0] }}"
+- name: "Template file ({{ shell_profile__file }})"
+  template:
+    src: profile_d.sh.j2
+    dest: "/etc/profile.d/{{ shell_profile__file }}.sh"
+    owner: root
+    group: root
+    mode: '0644'

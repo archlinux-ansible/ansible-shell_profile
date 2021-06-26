@@ -1,0 +1,15 @@
+---
+
+shell_profile__vars:
+  - common-aliases:
+      alias grep: grep --color=auto
+      alias ip: ip -c
+      alias ls: ls --color=auto
+      alias ll: ls -l
+      alias l: ls -la
+  - editor:
+      EDTIOR: nvim
+      alias vi: nvim
+      alias vim: nvim
+  - qt5ct:
+      QT_QPA_PLATFORMTHEME: qt5ct

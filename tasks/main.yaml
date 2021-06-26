@@ -1,0 +1,5 @@
+---
+
+ - name: Create config files
+   include_tasks: profile_file.yaml
+   loop: "{{ shell_profile__vars }}"
